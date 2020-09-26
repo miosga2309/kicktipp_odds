@@ -2,7 +2,7 @@ import json
 import requests
 
 # An api key is emailed to you when you sign up to a plan
-api_key = 'YOUR_API_KEY'
+api_key = '0987b75fb894ecee67989d9c2069f010'
 
 
 # First get a list of in-season sports
@@ -30,12 +30,12 @@ else:
 
 # To get odds for a sepcific sport, use the sport key from the last request
 #   or set sport to "upcoming" to see live and upcoming across all sports
-sport_key = 'upcoming'
+sport_key = 'soccer_germany_bundesliga'
 
 odds_response = requests.get('https://api.the-odds-api.com/v3/odds', params={
     'api_key': api_key,
     'sport': sport_key,
-    'region': 'uk', # uk | us | eu | au
+    'region': 'eu', # uk | us | eu | au
     'mkt': 'h2h' # h2h | spreads | totals
 })
 
