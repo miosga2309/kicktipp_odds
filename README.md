@@ -3,6 +3,7 @@ With a group of friends, we have a [kicktipp](https://www.kicktipp.de/) round wh
 
 To ensure that things do not get worse, I will work odds extracted via [The Odds API](https://the-odds-api.com/) and construct guesses based on our house rules. Also, I need to study the result distribution to not only guess the tendency correctly but to also make an informed decision about the goals per team.
 
+The API key is stored in a hidden (ignored) text file. To use the code, one can retrieve a key by creating an account (Starter for free) at [The Odds API](https://the-odds-api.com/).
 
 **Rules per game day** (nine in total):
 - The same tendency (win/draw/loss) for the home or away team can be guessed at maximum six times
