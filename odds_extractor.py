@@ -31,7 +31,7 @@ if not odds_json['success']:
 else:
     # odds_json['data'] contains a list of live and upcoming events and odds
     all_lists = []
-
+    print(odds_json['data'][5])
     for i in range(0,len(odds_json['data'])):
         ind_list = []
         ts = odds_json['data'][i]['commence_time']
@@ -57,6 +57,10 @@ else:
     print()
     print('Remaining requests', odds_response.headers['x-requests-remaining'])
     print('Used requests', odds_response.headers['x-requests-used'])
+
+
+
+
 
 
 
