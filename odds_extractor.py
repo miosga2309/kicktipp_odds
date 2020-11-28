@@ -31,14 +31,17 @@ if not odds_json['success']:
 else:
     # odds_json['data'] contains a list of live and upcoming events and odds
     all_lists = []
-    print(odds_json['data'][5])
+    print(odds_json['data'])
     for i in range(0,len(odds_json['data'])):
         ind_list = []
         ts = odds_json['data'][i]['commence_time']
         ind_list.append(datetime.utcfromtimestamp(ts).strftime('%Y-%m-%d'))
         home_t = odds_json['data'][i]['home_team']
+        teams = odds_json['data'][i]['teams']
         ind_list.append(home_t)
-        ind_list.append("".join(set(odds_json['data'][i]['teams'])-set([home_t])))
+        ind_list.append(teams[0])
+        ind_list.append(teams[1])
+        #ind_list.append("".join(set(odds_json['data'][i]['teams'])-set([home_t])))
 
         multiple_lists = []
         for j in range(0,len(odds_json['data'][i]['sites'])):
@@ -49,8 +52,8 @@ else:
         ind_list.append(odds_json['data'][i]['sites_count'])
         all_lists.append(ind_list)
 
-    df = pd.DataFrame(all_lists, columns = ['date', 'home_team', 'opponent',
-                                            '1', 'X', '2','n_providers'])
+    df = pd.DataFrame(all_lists, columns = ['date', 'home_team', 'team1', 'team2',
+                                            '1', '2', 'X','n_providers'])
     print(df)
 
     # check usage
