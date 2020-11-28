@@ -14,5 +14,8 @@ The API key is stored in a hidden (ignored) text file. To use the code, one can 
 - Correct tendency: 1 point
 - Else, 0 points
 
-## Improvements
-- automatical extraction and insertion of the new results into the model
+## Workflow for a new gameday
+- update the dataset of past games with the data from football-data (results and odds)
+- add revolution to neural net
+- fetch new gameday data from The Odds API (games and odds)
+- enter results in Kicktipp
