@@ -5,7 +5,7 @@ import pandas as pd
 from datetime import datetime
 
 # API key
-key_obj = open('/Users/jonasmiosga/Desktop/kicktipp_odds/key.txt', 'r')
+key_obj = open('/Users/jonasmiosga/Desktop/kicktipp_odds/v1_result_based/key.txt', 'r')
 key_line = key_obj.readlines()
 api_key = str(key_line[0])
 api_key = api_key.rstrip()
